@@ -1,7 +1,8 @@
 const express = require('express');
 const cors = require('cors');
 const app = express();
-const PORT = process.env.PORT || 3000;
+
+const port = process.env.PORT || 8080;
 
 let projects = [];
 
@@ -18,6 +19,6 @@ app.post('/projects', (req, res) => {
   res.status(201).json(newProject);
 });
 
-app.listen(PORT, () => {
-  console.log(`Server running on port ${PORT}`);
+app.listen(port, () => {
+  console.log(`Server running on port ${port}`);
 });
